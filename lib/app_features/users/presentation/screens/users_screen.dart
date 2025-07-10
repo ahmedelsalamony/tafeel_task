@@ -112,12 +112,7 @@ class _UsersScreenState extends State<UsersScreen> {
                   );
                 } else {
                   // Show loader at the bottom
-                  return state.status == UserStatus.loadingMore
-                      ? const Padding(
-                          padding: EdgeInsets.all(16),
-                          child: Center(child: CircularProgressIndicator()),
-                        )
-                      : const SizedBox.shrink();
+                  return const SizedBox(height: 300);
                 }
               },
               itemCount: state.users!.users.length + 1,
